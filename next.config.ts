@@ -1,7 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  serverExternalPackages: ['@supabase/ssr'],
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -9,8 +8,10 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
-  }
+    domains: ['via.placeholder.com'],
+    unoptimized: false,
+  },
+  serverExternalPackages: ['@supabase/ssr']
 };
 
 export default nextConfig;
